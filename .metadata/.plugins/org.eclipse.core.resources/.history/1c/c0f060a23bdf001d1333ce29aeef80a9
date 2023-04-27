@@ -1,0 +1,20 @@
+package quanlisaphanghoa;
+
+public class FoodStall extends Stall {
+
+	public FoodStall() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public FoodStall(int id, double area, double rentalUnitPrice) {
+		super(id, area, rentalUnitPrice);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	double getPay() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

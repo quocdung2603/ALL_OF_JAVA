@@ -1,0 +1,90 @@
+package bai1;
+
+import java.util.Scanner;
+
+public class Calculator {
+	int a,b;
+	Scanner sc = new Scanner(System.in);
+	public Calculator() {
+		// TODO Auto-generated constructor stub
+	}
+	public Calculator(int a, int b) {
+		super();
+		this.a = a;
+		this.b = b;
+	}
+	public int getA() {
+		return a;
+	}
+	public void setA(int a) {
+		this.a = a;
+	}
+	public int getB() {
+		return b;
+	}
+	public void setB(int b) {
+		this.b = b;
+	}
+	public void Input()
+	{
+		boolean c1= false;
+		do {
+			
+			try {
+				System.out.print("Nhap a: ");
+				int a = sc.nextInt();
+				if(a < -1000 || a > 1000)
+				{
+					throw new NumberOutOfRangeException();
+				}
+				else 
+				{
+					System.out.println("So vua nhap: " + a);
+					c1=false;
+				}
+			} catch (NumberOutOfRangeException e) {
+				System.out.println(e.getMessage());
+				c1=true;
+			}
+		} while (c1== true);
+		
+		boolean c2 = false;
+		do {
+			try {
+				System.out.print("Nhap b:" + b);
+				int b = sc.nextInt();
+				if(b < -1000 || b > 1000)
+				{
+					throw new NumberOutOfRangeException();
+				}
+				else 
+				{
+					System.out.println("So vua nhap: " + b);
+					c2=false;
+				}
+			} catch (NumberOutOfRangeException e) {
+				System.out.println(e.getMessage());
+				c2=true;
+			}
+		} while (c2 == true);
+		setA(a);
+		setB(b);
+	}
+	public int multiply()
+	{
+		return this.getA() * this.getB();
+	}
+	
+	public double divide()
+	{
+		double s=0;
+		try {
+			s=this.getA() / this.getB();
+		} catch (ArithmeticException e) {
+			System.out.println("Chia cho so 0!");
+			
+		}
+		return s;
+	}
+	
+}

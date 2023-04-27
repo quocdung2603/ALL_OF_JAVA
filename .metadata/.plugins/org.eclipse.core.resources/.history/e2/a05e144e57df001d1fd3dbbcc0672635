@@ -1,0 +1,9 @@
+package quanlisaphanghoa;
+
+public class Stall_testclass {
+
+	public Stall_testclass() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

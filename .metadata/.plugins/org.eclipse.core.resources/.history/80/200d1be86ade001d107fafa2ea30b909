@@ -1,0 +1,9 @@
+package quanliphonghoc;
+
+public class PhongFc {
+
+	public PhongFc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

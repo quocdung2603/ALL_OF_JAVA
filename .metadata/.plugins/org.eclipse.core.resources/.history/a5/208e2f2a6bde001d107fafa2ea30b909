@@ -1,0 +1,208 @@
+package quanliphonghoc;
+import java.util.*;
+public class PhongFc {
+	ArrayList<PHONG> a = new ArrayList<PHONG>();
+	Scanner sc = new Scanner(System.in);
+	
+	public PhongFc() {
+		// TODO Auto-generated constructor stub
+	}
+	public PhongFc(ArrayList<PHONG> a) {
+		super();
+		this.a = a;
+	}
+	public ArrayList<PHONG> getA() {
+		return a;
+	}
+	public void setA(ArrayList<PHONG> a) {
+		this.a = a;
+	}
+	
+	public void ThemPhong()
+	{
+		System.out.print("Nhap lua chon: " + '\n' + '\t' + "1. Phong ly thuyet" + '\n' + '\t' + "2. Phong may tinh" + '\n' + '\t' + "3. Phong thi nghiem");
+		System.out.print("--> "); int x = sc.nextInt();
+		if(x==1)
+		{
+			LyThuyet k = new LyThuyet();
+			k.Input();
+			for(int i=0;i<a.size();i++) {
+				if(k.getMaphong().compareTo(a.get(i).getMaphong())==0)
+				{
+					System.out.println("Them that bai!");
+					return;
+				}
+			}
+			System.out.println("Them thanh cong!");
+			a.add(k);
+		}
+		else if(x==2)
+		{
+			MayTinh k = new MayTinh();
+			k.Input();
+			for(int i=0;i<a.size();i++) {
+				if(k.getMaphong().compareTo(a.get(i).getMaphong())==0)
+				{
+					System.out.println("Them that bai!");
+					return;
+				}
+			}
+			System.out.println("Them thanh cong!");
+			a.add(k);
+		}
+		else if(x==3)
+		{
+			ThiNghiem k = new ThiNghiem();
+			k.Input();
+			for(int i=0;i<a.size();i++) {
+				if(k.getMaphong().compareTo(a.get(i).getMaphong())==0)
+				{
+					System.out.println("Them that bai!");
+					return;
+				}
+			}
+			System.out.println("Them thanh cong!");
+			a.add(k);
+		}
+	}
+	
+	public void TimKiemPhongBangMaPhong()
+	{
+		sc.nextLine()	;
+		System.out.print("Nhap ma phong can tim:"); String x = sc.nextLine();
+		for(int i=0;i<a.size();i++) 
+		{
+			if(x.compareTo(a.get(i).getMaphong())==0)
+			{
+				System.out.println(a.get(i));
+				return;
+			}
+		}
+		System.out.println("Khong tim thay phong! ");
+	}
+	
+	
+	public void XuatDanhSachCacPhong()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			System.out.println(a.get(i));
+		}
+	}
+	
+	public void XuatDanhSachCacPhongDatChuan()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			if(a.get(i).PhongHocDatChuan().toLowerCase().compareTo("dat")==0)
+			{
+				System.out.println(a.get(i));
+			}
+		}
+	}
+	
+	public void SapXepDanhSachTheoDayPhong()
+	{
+		for(int i=0;i<a.size()-1;i++)
+		{
+			for(int j=i+1;j<a.size();j++)
+			{
+				if(a.get(i).getDaynha().compareTo(a.get(j).getDaynha())>0)
+				{
+					Collections.swap(a, i, j);
+				}
+			}
+		}
+	}
+	
+	public void SapXepDanhSachTheoDienTich()
+	{
+		for(int i=0;i<a.size()-1;i++)
+		{
+			for(int j=i+1;j<a.size();j++)
+			{
+				if(a.get(i).getDientich() < a.get(j).getDientich())
+				{
+					Collections.swap(a, i, j);
+				}
+			}
+		}
+	}
+	
+	public void SapXepDanhSachTheoSoBongDen()
+	{
+		for(int i=0;i<a.size()-1;i++)
+		{
+			for(int j=i+1;j<a.size();j++)
+			{
+				if(a.get(i).getSobongden() > a.get(j).getSobongden())
+				{
+					Collections.swap(a, i, j);
+				}
+			}
+		}
+	}
+	
+	public void CapNhatSoMayTinh()
+	{
+		sc.nextLine();
+		System.out.print("Nhap ma phong can cap nhat: "); String  x= sc.nextLine();
+		for(int i=0;i<a.size();i++)
+		{
+			if(a.get(i) instanceof MayTinh && a.get(i).getMaphong().compareTo(x) == 0)
+			{
+				System.out.print("Nhap so luong may tinh moi: "); int z = sc.nextInt();
+				MayTinh tmp= (MayTinh) a.get(i);
+				tmp.setSomaytinh(z);
+				return;
+			}
+		}
+		System.out.println("Khong tim thay!");
+	}
+	
+	public void XoaPhong()
+	{
+		sc.nextLine();
+		System.out.print("Nhap ma phong can xoa: "); String  x= sc.nextLine();
+		for(int i=0;i<a.size();i++)
+		{
+			if(x.compareTo(a.get(i).getMaphong()) ==0)
+			{
+				System.out.println("Ban co chac muon xoa phong nay ? " + '\n'+'\t' +"1. Co" + '\n'+'\t' +"2. Khong");
+				System.out.print("--> "); int z = sc.nextInt();
+				if(z==1)
+				{
+					System.out.println("Xoa thanh cong!");
+					a.remove(i);
+				}
+				else if(z==2)
+				{
+					System.out.println("Huy thao tac!");
+					return;
+				}
+				
+			}
+		}
+		System.out.println("Khong tim thay phong");
+	}
+	
+	public void TongSoPhongHoc()
+	{
+		System.out.println("Tong so phong hoc: " + a.size());
+	}
+	
+	public void XuatDanhSachPhong60May()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			if(a.get(i) instanceof MayTinh)
+			{
+				MayTinh x = (MayTinh) a.get(i);
+				if(x.getSomaytinh() >=60)
+				{
+					System.out.println(a.get(i));
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package quanlihoadontiendien;
+
+public class KhachVN extends Tiendien {
+
+	public KhachVN() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public KhachVN(String makh, String hoten, Ngay ngayrahdl, double soluongkw, double dongia) {
+		super(makh, hoten, ngayrahdl, soluongkw, dongia);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	double Thanhtien() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

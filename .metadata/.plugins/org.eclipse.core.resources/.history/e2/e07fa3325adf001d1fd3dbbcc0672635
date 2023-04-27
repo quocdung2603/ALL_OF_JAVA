@@ -1,0 +1,9 @@
+package quanliappicar;
+
+public class IcarFC {
+
+	public IcarFC() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

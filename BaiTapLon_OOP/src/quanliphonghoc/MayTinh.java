@@ -1,0 +1,45 @@
+package quanliphonghoc;
+
+public class MayTinh extends PHONG {
+	int somaytinh;
+	public MayTinh() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MayTinh(String maphong, String daynha, double dientich, int sobongden ,int somaytinh) {
+		super(maphong, daynha, dientich, sobongden);
+		// TODO Auto-generated constructor stub
+		this.somaytinh = somaytinh;
+	}
+	
+	public int getSomaytinh() {
+		return somaytinh;
+	}
+
+	public void setSomaytinh(int somaytinh) {
+		this.somaytinh = somaytinh;
+	}
+
+	public void Input()
+	{
+		super.Input();
+		System.out.print("So may tinh: "); int e = sc.nextInt();
+		this.somaytinh = e;
+	}
+	@Override
+	public String PhongHocDatChuan() {
+		double check = this.getDientich() / this.getSobongden();
+		double m = this.getDientich() / this.getSomaytinh();
+		if(check == 10 && m >= 1.5) return "Dat";
+		return "Chua dat";
+	}
+
+	@Override
+	public String toString() {
+		return "MayTinh [somaytinh=" + somaytinh + ", maphong=" + maphong + ", daynha=" + daynha + ", dientich="
+				+ dientich + ", sobongden=" + sobongden + ", PhongHocDatChuan()=" + PhongHocDatChuan() + "]";
+	}
+	
+	
+
+}

@@ -1,0 +1,54 @@
+package QLNV;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class qlnv {
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<NHANVIEN> b  = new ArrayList<NHANVIEN>();
+        qlnv_factory a = new qlnv_factory(b);
+        int type;
+        while(true)
+        {
+            System.out.println("Moi nhap lua chon:"+'\n'+'\t'+ "0. Thoat chuong trinh" + '\n' + '\t' + "1. Them nhan vien chinh thuc" + '\n' + '\t' + "2. Them nhan vien thoi vu"
+            + '\n' + '\t' + "3. In danh sach");
+            type = sc.nextInt();
+            if(type == 1 )
+            {
+                CHINHTHUC k = new CHINHTHUC();
+                k.Input();
+                ExceptionClass ex = new ExceptionClass();
+                try{
+                    ex.setSalary(k.Tinhluong());
+                    a.a.add(k);
+                }
+                catch (ExceptionClass e){
+                    System.out.println(e.getMessage());
+                }
+                
+            }
+            else if(type == 2)
+            {
+                THOIVU k = new THOIVU();
+                k.Input();
+                ExceptionClass ex = new ExceptionClass();
+                try{
+                    ex.setSalary(k.Tinhluong());
+                    a.a.add(k);
+                }
+                catch (ExceptionClass e){
+                    System.out.println(e.getMessage());
+                }
+            }
+            else if(type==3)
+            {
+                a.Indanhsach();
+            }
+            else if(type == 0) 
+                return;
+        }
+        
+    }
+}

@@ -1,0 +1,20 @@
+package quanlisaphanghoa;
+
+public class JewelryStall extends Stall {
+
+	public JewelryStall() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public JewelryStall(int id, double area, double rentalUnitPrice) {
+		super(id, area, rentalUnitPrice);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	double getPay() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

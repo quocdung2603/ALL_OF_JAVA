@@ -1,0 +1,14 @@
+package quanlisinhvien;
+
+public class Employee extends Person {
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String hoten, String diachi) {
+		super(hoten, diachi);
+		// TODO Auto-generated constructor stub
+	}
+
+}

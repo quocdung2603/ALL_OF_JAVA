@@ -1,0 +1,9 @@
+package quanlidichvukhachsan;
+
+public class GiatUi implements IDichVu {
+
+	public GiatUi() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,9 @@
+package quanlikhohanghoa;
+
+public class KhoFc {
+
+	public KhoFc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

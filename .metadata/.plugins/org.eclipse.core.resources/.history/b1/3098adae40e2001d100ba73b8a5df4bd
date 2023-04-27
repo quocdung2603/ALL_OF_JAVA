@@ -1,0 +1,9 @@
+package quanlythegioididong;
+
+public class Productfc {
+
+	public Productfc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

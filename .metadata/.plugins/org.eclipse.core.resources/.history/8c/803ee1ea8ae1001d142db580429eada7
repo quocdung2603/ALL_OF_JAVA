@@ -1,0 +1,48 @@
+package bai1;
+
+import java.util.*;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a, b;
+		boolean c1 = false;
+		do {
+
+			try {
+				System.out.print("Nhap a: ");
+				a = sc.nextInt();
+				if (a < -1000 || a > 1000) {
+					throw new NumberOutOfRangeException();
+				} else {
+					System.out.println("So vua nhap: " + a);
+					c1 = false;
+				}
+			} catch (NumberOutOfRangeException e) {
+				System.out.println(e.getMessage());
+				c1 = true;
+			}
+		} while (c1 == true);
+
+		boolean c2 = false;
+		do {
+			try {
+				System.out.print("Nhap b: ");
+				b = sc.nextInt();
+				if (b < -1000 || b > 1000) {
+					throw new NumberOutOfRangeException();
+				} else {
+					System.out.println("So vua nhap: " + b);
+					c2 = false;
+				}
+			} catch (NumberOutOfRangeException e) {
+				System.out.println(e.getMessage());
+				c2 = true;
+			}
+		} while (c2 == true);
+		Calculator x = new Calculator(a, b);
+		System.out.println(x.multiply(a,b));
+	}
+
+}

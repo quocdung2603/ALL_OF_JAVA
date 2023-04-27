@@ -1,0 +1,9 @@
+package quanlihoadontiendien;
+
+public class TienDienfc {
+
+	public TienDienfc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

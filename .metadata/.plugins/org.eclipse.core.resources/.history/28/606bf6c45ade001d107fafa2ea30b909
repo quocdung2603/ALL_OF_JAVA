@@ -1,0 +1,14 @@
+package quanliphonghoc;
+
+public class LyThuyet extends PHONG {
+
+	public LyThuyet() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public LyThuyet(String maphong, String daynha, double dientich, int sobongden) {
+		super(maphong, daynha, dientich, sobongden);
+		// TODO Auto-generated constructor stub
+	}
+
+}

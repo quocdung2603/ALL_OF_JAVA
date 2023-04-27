@@ -1,0 +1,26 @@
+package quanlikhohanghoa;
+
+public class Sanhsu extends Kho {
+
+	public Sanhsu() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Sanhsu(String mahang, String tenhang, int soluongton, double dongia) {
+		super(mahang, tenhang, soluongton, dongia);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	String MucDoBuonBan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	double getVAT() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

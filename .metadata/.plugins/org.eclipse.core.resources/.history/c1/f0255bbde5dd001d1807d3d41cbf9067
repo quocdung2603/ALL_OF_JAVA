@@ -1,0 +1,26 @@
+package quanlikhohanghoa;
+
+public class Thucpham extends Kho {
+
+	public Thucpham() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Thucpham(String mahang, String tenhang, int soluongton, double dongia) {
+		super(mahang, tenhang, soluongton, dongia);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	void MucDoBuonBan() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	double getVAT() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,20 @@
+package quanliphonghoc;
+
+public class MayTinh extends PHONG {
+
+	public MayTinh() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MayTinh(String maphong, String daynha, double dientich, int sobongden) {
+		super(maphong, daynha, dientich, sobongden);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	String PhongHocDatChuan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

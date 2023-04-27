@@ -1,0 +1,15 @@
+package quanlidichvukhachsan;
+
+public class ThueXe implements IDichVu {
+
+	public ThueXe() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getTienDichVu() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

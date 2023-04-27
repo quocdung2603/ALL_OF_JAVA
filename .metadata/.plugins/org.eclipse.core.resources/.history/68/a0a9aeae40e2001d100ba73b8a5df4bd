@@ -1,0 +1,20 @@
+package quanlythegioididong;
+
+public class Laptop extends Product {
+
+	public Laptop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Laptop(int masp, String tensp, double giagoc) {
+		super(masp, tensp, giagoc);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	double Tinhgiaban() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,9 @@
+package quanlisinhvien;
+
+public class qlviennghiencuu_fc {
+
+	public qlviennghiencuu_fc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

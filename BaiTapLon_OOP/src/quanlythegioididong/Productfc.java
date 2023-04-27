@@ -1,0 +1,42 @@
+package quanlythegioididong;
+
+import java.util.*;
+
+public class Productfc {
+	Vector<Product> a = new Vector<Product>();
+	public Productfc() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Productfc(Vector<Product> a) {
+		this.a = a;
+	}
+
+	public void Indanhsach()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			System.out.println(a.get(i));
+		}
+	}
+	
+	public void LaptopGiaCaoNhat()
+	{
+		double s=-1;
+		for(int i=0;i < a.size();i++)
+		{
+			if(a.get(i) instanceof Laptop)
+			{
+				s=Math.max(s, a.get(i).Tinhgiaban());
+			}
+		}
+		for(int i=0;i < a.size();i++)
+		{
+			if(a.get(i) instanceof Laptop && a.get(i).Tinhgiaban() == s)
+			{
+				System.out.println(a.get(i));
+			}
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+package quanlisaphanghoa;
+
+public class StallFc {
+
+	public StallFc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

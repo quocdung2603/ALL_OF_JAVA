@@ -1,0 +1,6 @@
+package quanlikhachhangmuavenhaga;
+import java.util.*;
+public class KhachHang {
+	protected String cmnd,tenkh,diemden;
+	double giatien;
+}

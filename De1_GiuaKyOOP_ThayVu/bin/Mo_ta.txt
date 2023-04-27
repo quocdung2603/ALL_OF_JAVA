@@ -1,0 +1,21 @@
+Một công ty có nhiều Nhân viên, được chia thành 2 loại Chính thức và Thời vụ:
+-Thông tin Nhân viên bao gồm: Mã nhân viên (chuỗi), Họ tên (chuỗi) và 2 phương thức Tính tiền lương và Xem Thông Tin (In ra màn hình huỗi thông tin dạng: Mã NV …    Tên ….      Lương …. )
+-cMỗi nhân viên sẽ có nhiều Bằng Cấp. Thông tin bằng cấp bao gồm: Loại bằng cấp ( gồm 2 loại Đại học và Thạc sĩ) , Chuyên ngành (Chuỗi). Với mỗi bằng Đại học nhân viên được tăng thêm 10% lương, bằng thạc sĩ được tăng 15% lương.
+
+-Nhân viên Chính thức: ngoài các thông tin trên, còn có thông tin Bậc lương (số nguyên) và và phương thức Tính Tiền lương được tính theo công thức: Tiền Lương = Bậc lương * Lương cơ bản (lương cơ bản = 2.000.000). 
+
+-Nhân viên Thời vụ: ngoài các thông tin trên, còn có thông tin Thời hạn hợp đồng (Số nguyên) và Tiền lương được tính bằng công thức: Lương cơ bản * 2 + Phụ cấp (nhân viên có thời hạn hợp đồng từ 90 ngày trở lên mới được phụ cấp 1.000.000) 
+Yêu cầu:
+1.Áp dụng tính đóng gói, kế thừa, trừu tượng và đa hình để để thiết kế các lớp theo yêu cầu:
+a.Thiết kế đủ các lớp (1đ) và tạo mối quan hệ giữa các lớp (1đ)
+b.Xây dựng các thuộc tính (fields/attributes) cho các lớp (1đ)
+c.Tạo phương thức khởi tạo (constructors) đầy đủ tham số cho các class. (1đ) 
+d.Tạo các phương thức, các getter/accessor, các setter/mutator cần thiết cho các class. (1đ)
+2.Viết chương trình nhập thông tin danh sách nhân viên  
+a.Nhập đầy đủ thông tin nhân viên và các bằng cấp (2 đ)
+b.Xây dựng một lớp xử lý ngoại lệ cho trường hợp Nhân viên có Tiền lương vượt quá 50.000.000 (1đ). Khi đó, hệ thống sẽ hiển thị thông báo và không cho phép nhập nhân viên này. (1đ)
+3.Thống kê danh sách nhân viên và tiền lương theo mẫu (1đ)
+
+MaNhanVien 	TenNhanVien   	TienLuong 	
+1		Nguyen Van A 	     550000
+2       Tran Thi B       	 4500000

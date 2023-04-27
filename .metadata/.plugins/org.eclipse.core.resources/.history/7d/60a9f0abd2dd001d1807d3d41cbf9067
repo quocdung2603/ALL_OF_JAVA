@@ -1,0 +1,121 @@
+package quanlisinhvien;
+
+import java.util.*;
+
+public class qlviennghiencuu_fc {
+	ArrayList<Person> a = new ArrayList<Person>();
+	Scanner sc = new Scanner(System.in);
+
+	public qlviennghiencuu_fc() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public qlviennghiencuu_fc(ArrayList<Person> a) {
+		super();
+		this.a = a;
+	}
+
+	public void ThemNguoi() {
+		System.out.println(
+				"Chon: " + '\n' + '\t' + "1. sinh vien" + '\n' + '\t' + "2. nhan vien" + '\n' + '\t' + "3. khach hang");
+		System.out.print("--> ");
+		int x = sc.nextInt();
+		if (x == 1) {
+			Student k = new Student();
+			k.Input();
+			a.add(k);
+		} else if (x == 2) {
+			Employee k = new Employee();
+			k.Input();
+			a.add(k);
+		} else if (x == 3) {
+			Customer k = new Customer();
+			k.Input();
+			a.add(k);
+		}
+	}
+	
+	public void XoaNguoi()
+	{
+		sc.nextLine();
+		System.out.print("Ho ten nguoi can xoa: "); String x =sc.nextLine(); 
+		int k=-1;
+		for(int i=0;i<a.size();i++)
+		{
+			if(a.get(i).getHoten().compareTo(x)==0)
+			{
+				System.out.println("Xoa thanh cong!");
+				a.remove(i);
+				return;
+			}
+		}
+		System.out.println("Xoa that bai!");
+	}
+	
+//	public void SapXepHoTenAlphaB()
+//	{
+//		for(int i=0;i<a.size()-1;i++)
+//		{
+//			String ho1="",ten1="";
+//			int k=a.get(i).getHoten().length();
+//			int demho1=0;
+//			while(demho1<k && a.get(i).getHoten().charAt(demho1) != ' ')
+//			{
+//				ho1+=a.get(i).getHoten().charAt(demho1);
+//				demho1++;
+//			}
+//			while(k>=0 && a.get(i).getHoten().charAt(k-1) != ' ')
+//			{
+//				ten1 = a.get(i).getHoten().charAt(k-1) + ten1;
+//				k--;
+//			}
+//			for(int j=i+1;j<a.size();j++)
+//			{
+//				String ho2="",ten2="";
+//				int k1=a.get(j).getHoten().length();
+//				int demho2=0;
+//				while(demho2<k1 && a.get(j).getHoten().charAt(demho2) != ' ')
+//				{
+//					ho2+=a.get(j).getHoten().charAt(demho2);
+//					demho2++;
+//				}
+//				while(k1>=0 && a.get(j).getHoten().charAt(k1-1) != ' ')
+//				{
+//					ten2 = a.get(j).getHoten().charAt(k1-1) + ten1;
+//					k1--;
+//				}
+//				
+//				if(ten1.compareTo(ten2) > 0)
+//				{
+//					Collections.swap(a, i, j);
+//				}
+//				else if(ten1.compareTo(ten2)== 0 && ho1.compareTo(ho2) > 0)
+//				{
+//					Collections.swap(a, i, j);
+//				}
+//			}
+//		}
+//	}
+	
+	public void SapXepHoTenAlphaB()
+	{
+		for(int i=0;i<a.size()-1;i++) 
+		{
+			for(int j=i+1;j<a.size()-1;j++)
+			{
+				if(a.get(i).getHoten().compareTo(a.get(j).getHoten()) > 0)
+				{
+					Collections.swap(a, i, j);
+				}
+			}
+		}
+	}
+	
+	public void XuatDanhSach()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			System.out.println(a.get(i));
+		}
+	}
+}

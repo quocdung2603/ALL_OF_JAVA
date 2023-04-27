@@ -1,0 +1,28 @@
+package quanlidichvukhachsan;
+import java.util.*;
+public class HoaDonFc {
+	Vector<HoaDon> a = new Vector<HoaDon>();
+	public HoaDonFc()
+	{
+		
+	}
+	public HoaDonFc(Vector<HoaDon> a) {
+		super();
+		this.a = a;
+	}
+	
+	public void ThemHoaDon()
+	{
+		HoaDon k = new HoaDon();
+		k.Input();
+		a.add(k);
+	}
+	
+	public void InDanhSachHoaDon()
+	{
+		for(int i=0;i<a.size();i++)
+		{
+			System.out.println(a.get(i));
+		}
+	}
+}

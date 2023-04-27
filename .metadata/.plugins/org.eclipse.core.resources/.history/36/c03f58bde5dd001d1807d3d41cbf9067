@@ -1,0 +1,26 @@
+package quanlikhohanghoa;
+
+public class Dienmay extends Kho {
+
+	public Dienmay() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Dienmay(String mahang, String tenhang, int soluongton, double dongia) {
+		super(mahang, tenhang, soluongton, dongia);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	String MucDoBuonBan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	double getVAT() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

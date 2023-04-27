@@ -1,0 +1,5 @@
+package quanliappicar;
+
+public interface Icar {
+
+}

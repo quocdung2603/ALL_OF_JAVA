@@ -1,0 +1,20 @@
+package quanliphonghoc;
+
+public class ThiNghiem extends PHONG {
+
+	public ThiNghiem() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ThiNghiem(String maphong, String daynha, double dientich, int sobongden) {
+		super(maphong, daynha, dientich, sobongden);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String PhongHocDatChuan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

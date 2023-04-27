@@ -1,0 +1,14 @@
+package bai1;
+import java.util.*;
+public class TestClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Calculator x = new Calculator();
+		x.Input();
+		double ans1= x.multiply();
+		System.out.println(ans1);
+		sc.close();
+	}
+
+}
